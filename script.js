@@ -197,7 +197,11 @@ function generatePhrase() {
 var savedTexts = [generatePhrase()+' ',generatePhrase()+' ',generatePhrase()+' '];
 var m = 1;
 var auto = false;
-setInterval (play, 100);
+setInterval(function () {
+    if (auto) {
+        play();
+    }
+}, 100);
 function play () {
     var k = 0;
     while (k<m) {
