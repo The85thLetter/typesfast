@@ -196,7 +196,9 @@ function generatePhrase() {
 }
 var savedTexts = [generatePhrase()+' ',generatePhrase()+' ',generatePhrase()+' '];
 var m = 1;
-$("body").keydown(function(e){
+var auto = false;
+setInterval (play, 100);
+function play () {
     var k = 0;
     while (k<m) {
         var text = savedTexts[story][index];
@@ -212,4 +214,7 @@ $("body").keydown(function(e){
         }
         k++;
     }
+}
+$("body").keydown(function(e){
+    play();
 });
