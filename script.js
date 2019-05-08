@@ -207,7 +207,7 @@ $(document).keyup(function (e) {
 });
 setInterval(function () {
     if (keys.z) {shift=true;}
-    if (auto) {
+    if (auto&&shift) {
         play();
     }
 }, 100);
